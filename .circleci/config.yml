@@ -30,3 +30,6 @@ workflows:
                 - master
                 - develop
                 - /^release-.*/
+                - /.*develop.*/
+                - /.*master.*/
+                - /.*hotfix.*/
