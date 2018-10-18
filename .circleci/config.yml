@@ -1,0 +1,32 @@
+# Java Gradle CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-java/ for more details
+#
+version: 2
+#references:
+  #defaults: &defaults
+  #docker:
+  #  - image: circleci/android:api-28-alpha
+jobs:
+  build-code:
+    #<<: *defaults
+    working_directory: ~/workspace/ci/
+    docker:
+      - image: circleci/android:api-28-alpha
+    environment:
+        JVM_OPTS: -Xmx3200m
+    steps:
+      # Checkout codebase
+      - checkout
+
+workflows:
+  version: 2
+  code-build:
+    jobs:
+      - build-code:
+          filters:
+            branches:
+              only:
+                - master
+                - develop
+                - /^release-.*/
