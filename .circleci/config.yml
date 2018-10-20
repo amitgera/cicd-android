@@ -18,7 +18,7 @@ jobs:
     steps:
       # Checkout codebase
       - checkout
-#buildfbb3.1-dev
+#buildfbb3.2-dev
 workflows:
   version: 2
   code-build:
