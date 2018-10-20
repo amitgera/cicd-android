@@ -18,7 +18,7 @@ jobs:
     steps:
       # Checkout codebase
       - checkout
-#buildnewfb1.2-dev
+#buildnewfb2.0
 workflows:
   version: 2
   code-build:
