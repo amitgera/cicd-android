@@ -18,7 +18,7 @@ jobs:
     steps:
       # Checkout codebase
       - checkout
-#buildnewfb2.1
+#buildnewfb3.0
 workflows:
   version: 2
   code-build:
@@ -29,7 +29,7 @@ workflows:
               only:
                 - master
                 - develop
-                #- /^release-.*/
-                #- /.*develop.*/
-                #- /.*master.*/
-                #- /.*hotfix.*/
+                - /^release-.*/
+                - /.*develop.*/
+                - /.*master.*/
+                - /.*hotfix.*/
