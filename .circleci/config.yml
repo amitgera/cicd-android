@@ -29,7 +29,7 @@ workflows:
               only:
                 - master
                 - develop
-                - /^release-.*/
-                - /.*develop.*/
-                - /.*master.*/
-                - /.*hotfix.*/
+                #- /^release-.*/
+                #- /.*develop.*/
+                #- /.*master.*/
+                #- /.*hotfix.*/
