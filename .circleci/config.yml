@@ -18,7 +18,7 @@ jobs:
     steps:
       # Checkout codebase
       - checkout
-#git checkout -b ag/develop/b1 origin/develop
+#git checkout -b b2 origin/develop
 workflows:
   version: 2
   code-build:
