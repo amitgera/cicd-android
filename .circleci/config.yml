@@ -24,11 +24,11 @@ workflows:
   code-build:
     jobs:
       - build-code:
-          filters:
-            branches:
-              only:
-                - master
-                - develop
+#          filters:
+#            branches:
+#              only:
+#                - master
+#                - develop
                 #- /^release-.*/
                 #- /.*develop.*/
                 #- /.*master.*/
