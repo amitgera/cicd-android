@@ -13,6 +13,7 @@ small_environment: &small_environment
   resource_class: small
 
 jobs:
+
   build-code:
     <<: *defaults
     #working_directory: ~/workspace/ci/
@@ -23,6 +24,7 @@ jobs:
     steps:
       # Checkout codebase
       - checkout
+
   branch-check:
     <<: *defaults
     <<: *small_environment
@@ -84,6 +86,7 @@ workflows:
   version: 2
   code-build:
     jobs:
+      - branch-check
       - build-code:
           requires:
             - branch-check
