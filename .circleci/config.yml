@@ -3,14 +3,14 @@
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
 version: 2
-references:
-  defaults: &defaults
-    working_directory: ~/workspace/ci/
-    docker:
-      - image: circleci/android:api-28-alpha
 
-  small_environment: &small_environment
-    resource_class: small
+defaults: &defaults
+  working_directory: ~/workspace/ci/
+  docker:
+    - image: circleci/android:api-28-alpha
+
+small_environment: &small_environment
+  resource_class: small
 
 jobs:
   build-code:
