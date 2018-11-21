@@ -11,7 +11,8 @@ defaults: &defaults
 
 small_environment: &small_environment
   resource_class: small
-
+#git checkout -b b4 origin/develop
+#commit:1
 jobs:
 
   build-code:
