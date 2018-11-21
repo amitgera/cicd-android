@@ -13,9 +13,6 @@ small_environment: &small_environment
   resource_class: small
 #git checkout -b b4 origin/develop
 #commit:1
-#commit:2
-#commit:3
-#commit:4
 jobs:
 
   build-code:
