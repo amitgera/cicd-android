@@ -98,7 +98,7 @@ jobs:
                      --data revision=$CIRCLE_SHA1 \
                      https://circleci.com/api/v1.1/project/github/amitgera/cicd-android/tree/$CIRCLE_BRANCH
                 fi
-          name:
+                END
 #commit7
 workflows:
   version: 2
