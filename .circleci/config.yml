@@ -104,15 +104,8 @@ workflows:
   code-build:
     jobs:
       - branch-check
+      - comment-check
       - build-code:
           requires:
             - branch-check
-#          filters:
-#            branches:
-#              only:
-#                - master
-#                - develop
-                #- /^release-.*/
-                #- /.*develop.*/
-                #- /.*master.*/
-                #- /.*hotfix.*/
+            - comment-check
