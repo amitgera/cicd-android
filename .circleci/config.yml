@@ -47,7 +47,7 @@ jobs:
                     circlecitoken = os.environ["circlecitoken"]
                     r = requests.get('https://circleci.com/api/v1.1/project/github/amitgera/cicd-android/'+cibuildnum+'?circle-token='+circlecitoken)
                     pullreq = r.json()["pull_requests"][0]["url"]
-                token = "7f6246070d46e0fc27a857c18a966af9eb753017"
+                token = os.environ["pythontoken"]
                 pullid =(filter(str.isdigit, pullreq))
                 headers={'Authorization': token}
                 base_branch_name = "not_this_branch"
