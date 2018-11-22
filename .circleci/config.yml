@@ -84,6 +84,21 @@ jobs:
                     r=requests.post('http://https://api.github.com/repos/amitgera/cicd-android/issues/'+pullid+'/comments',headers=headers, data = '{"body": '+jsonItem +'}')
                     sys.exit(-1)
                 END
+  comment-check:
+    <<: *deafaults
+    <<:
+    steps:
+      - deploy:
+          name: conditionally run a deploy job
+          command: |
+                # replace this with your build/deploy check (i.e. current branch is "release")
+                if [[ true ]]; then
+                curl --user ${CIRCLE_API_USER_TOKEN} \
+                     --data build_parameters[CIRCLE_JOB]=deploy_docker \
+                     --data revision=$CIRCLE_SHA1 \
+                     https://circleci.com/api/v1.1/project/github/amitgera/cicd-android/tree/$CIRCLE_BRANCH
+                fi
+          name:
 #commit7
 workflows:
   version: 2
