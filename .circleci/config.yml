@@ -85,11 +85,11 @@ jobs:
                     sys.exit(-1)
                 END
   comment-check:
-    <<: *deafaults
-    <<:
+    <<: *defaults
+    <<: *small_environment
     steps:
-      - deploy:
-          name: conditionally run a deploy job
+      - run:
+          name: conditionally run a job
           command: |
                 # replace this with your build/deploy check (i.e. current branch is "release")
                 if [[ true ]]; then
