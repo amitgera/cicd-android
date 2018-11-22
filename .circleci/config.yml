@@ -2,7 +2,7 @@
 #
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
-version: 2
+version: 2.1
 
 defaults: &defaults
   working_directory: ~/workspace/ci/
@@ -101,7 +101,7 @@ jobs:
                 END
 #commit1
 workflows:
-  version: 2
+  version: 2.1
   code-build:
     jobs:
       - branch-check
