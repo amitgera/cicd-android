@@ -88,7 +88,6 @@ jobs:
     <<: *small_environment
     steps:
       - run:
-          print "rerun"
           name: conditionally run a deploy job
           command: |
                 # replace this with your build/deploy check (i.e. current branch is "release")
