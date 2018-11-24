@@ -99,7 +99,7 @@ jobs:
                      https://circleci.com/api/v1.1/project/github/amitgera/cicd-android/tree/$CIRCLE_BRANCH
                 fi
                 END
-#commit1
+#git checkout -b ag-b1 origin/develop
 workflows:
   version: 2.1
   code-build:
