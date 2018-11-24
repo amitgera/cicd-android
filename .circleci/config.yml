@@ -2,7 +2,7 @@
 #
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
-version: 2.1
+version: 2
 
 defaults: &defaults
   working_directory: ~/workspace/ci/
@@ -99,9 +99,9 @@ jobs:
                      https://circleci.com/api/v1.1/project/github/amitgera/cicd-android/tree/$CIRCLE_BRANCH
                 fi
                 END
-#commit1
+#git checkout -b ag-b1 origin/develop : 8
 workflows:
-  version: 2.1
+  version: 2
   code-build:
     jobs:
       - branch-check
