@@ -43,10 +43,8 @@ jobs:
                 if os.environ.get('CIRCLE_PULL_REQUEST') is not None:
                     pullreq = os.environ["CIRCLE_PULL_REQUEST"]
                 else:
-                    cibuildnum = os.environ["CIRCLE_BUILD_NUM"]
-                    circlecitoken = os.environ["circlecitoken"]
-                    r = requests.get('https://circleci.com/api/v1.1/project/github/amitgera/cicd-android/'+cibuildnum+'?circle-token='+circlecitoken)
-                    pullreq = r.json()["pull_requests"][0]["url"]
+                    print "Not a Pull Request"
+                    sys.exit(-1)
                 token = os.environ["pythontoken"]
                 pullid =(filter(str.isdigit, pullreq))
                 headers={'Authorization': token}
