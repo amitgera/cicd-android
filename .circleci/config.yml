@@ -70,7 +70,7 @@ jobs:
                     r=requests.post('https://api.github.com/repos/amitgera/cicd-android/issues/'+pullid+'/labels',headers=headers, data = '["'+base_branch_name+'"]')
                     print r.json()
                     sys.exit(0)
-                elif base_branch_name== "develop" :
+                elif base_branch_name == "develop" :
                     print "develop branch build"
                     sys.exit(0)
                 elif base_branch_name == "master" :
