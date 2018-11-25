@@ -66,13 +66,13 @@ jobs:
                         break
                 print "The base branch name is : "+base_branch_name
                 if base_branch_name.startswith("release_"):
-                    print "building branch : " + os.environ("CIRCLE_BRANCH") + " against branch : "+base_branch_name
+                    print "building branch : " + os.environ["CIRCLE_BRANCH"] + " against branch : "+base_branch_name
                     sys.exit(0)
                 elif base_branch_name == "develop" :
-                    print "building branch : " + os.environ("CIRCLE_BRANCH") + " against branch : "+base_branch_name
+                    print "building branch : " + os.environ["CIRCLE_BRANCH"] + " against branch : "+base_branch_name
                     sys.exit(0)
                 elif base_branch_name == "master" :
-                    print "building branch : " + os.environ("CIRCLE_BRANCH") + " against branch : "+base_branch_name
+                    print "building branch : " + os.environ["CIRCLE_BRANCH"] + " against branch : "+base_branch_name
                     sys.exit(0)
                 else:
                     print "PR : not release nor develop neither master"
