@@ -75,7 +75,7 @@ jobs:
                     print "building branch : " + os.environ["CIRCLE_BRANCH"] + " against branch : "+base_branch_name
                     sys.exit(0)
                 else:
-                    print "This PR[" + pullreq + "] is not against release/develop/master"
+                    print "This PR[" + pullreq + "] is not against base branch : release/develop/master"
                     sys.exit(-1)
                 END
   comment-check:
@@ -93,7 +93,7 @@ jobs:
                      https://circleci.com/api/v1.1/project/github/amitgera/cicd-android/tree/$CIRCLE_BRANCH
                 fi
                 END
-#git checkout -b ag-b2 origin/develop : 1
+#git checkout -b ag-b2 origin/develop : 20
 workflows:
   version: 2
   code-build:
