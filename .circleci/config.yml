@@ -53,7 +53,7 @@ jobs:
                     counter += 1
                     try:
                         r = requests.get('https://api.github.com/repos/amitgera/cicd-android/pulls/'+pullid,headers=headers)
-                        print r.json()
+                        print r
                     except:
                         print r.status_code
                     if r.status_code != 200 and counter<=5:
