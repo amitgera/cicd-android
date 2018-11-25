@@ -61,6 +61,7 @@ jobs:
                         continue
                     if r.status_code ==200:
                         base_branch_name=r.json()['base']['ref']
+                        break
                     if base_branch_name!="not_this_branch" or counter>=5:
                         break
                 print "The base branch name is : "+base_branch_name
