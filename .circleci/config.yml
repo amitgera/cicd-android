@@ -75,7 +75,7 @@ jobs:
                     print "building branch : " + os.environ["CIRCLE_BRANCH"] + " against branch : "+base_branch_name
                     sys.exit(0)
                 else:
-                    print "This PR["+pullreq+"] is not against release/develop/master"
+                    print "This PR[" + pullreq + "] is not against release/develop/master"
                     sys.exit(-1)
                 END
   comment-check:
