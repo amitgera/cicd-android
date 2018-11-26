@@ -11,8 +11,6 @@ defaults: &defaults
 
 small_environment: &small_environment
   resource_class: small
-#git checkout -b b4 origin/develop
-#commit:2
 jobs:
 
   build-code:
@@ -56,6 +54,8 @@ jobs:
                         print r
                     except:
                         print r.status_code
+                        if counter <=5:
+                          continue
                     if r.status_code != 200 and counter<=5:
                         time.sleep(30)
                         continue
